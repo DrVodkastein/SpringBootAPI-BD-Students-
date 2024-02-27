@@ -39,7 +39,8 @@ public class StudentController {
     }
 
     @DeleteMapping("delete_student/{email}")
-    public void deleteStudent(@PathVariable String email) {
+    public String deleteStudent(@PathVariable String email) {
         service.deleteStudent(email);
+        return "successfully DELETED";
     }
 }
